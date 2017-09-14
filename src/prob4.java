@@ -2,6 +2,7 @@ public class prob4 {
 	
 	public static void main(String[] args) {
 		int pal = 0;
+		System.out.println(pal);
 		for(int i = 999; i >= 100; i++) {
 			for(int j = 999; j >= 100; j++) {
 				if(isPalindrome(i*j)) {
@@ -9,7 +10,7 @@ public class prob4 {
 				}
 			}
 		}
-		System.out.println(pal);
+		
 		
 	}
 	
