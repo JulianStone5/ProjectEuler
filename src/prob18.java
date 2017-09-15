@@ -1,6 +1,6 @@
 public class prob18 {
 	
-	int[][] pyr = {{75}, 
+	public static int[][] pyr = {{75}, 
 	             {95, 64},
 	             {17, 47, 82},
 	             {18, 35, 87, 10},
@@ -17,7 +17,14 @@ public class prob18 {
 	             {4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23}};
 	
 	public static void main(String[] args) {
-		
+		for(int i = 13; i >= 0; i--) {
+			for(int j = 0; j < pyr[i].length; j++) {
+				pyr[i][j] += Math.max(pyr[i+1][j], pyr[i+1][j+1]);
+				pyr[i+1][j] = 0;
+			}
+			pyr[i+1][pyr[i].length] = 0;
+		}
+		System.out.println(pyr[0][0]);
 	}
 	
 }
