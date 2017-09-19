@@ -1,6 +1,6 @@
 import java.math.BigInteger;
 
-public class prob6 {
+public class prob006 {
 	
 	public static void main(String[] args) {
 		BigInteger squareSum = BigInteger.ZERO;

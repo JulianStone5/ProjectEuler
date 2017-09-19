@@ -1,4 +1,4 @@
-public class prob4 {
+public class prob004 {
 	
 	public static void main(String[] args) {
 		int pal = 0;

@@ -1,16 +1,21 @@
 import java.util.ArrayList;
 
-public class prob7 {
+public class prob010 {
 	
 	public static ArrayList<Integer> primes = new ArrayList<Integer>();
 	
 	public static void main(String[] args) {
-		int i = 2;
-		while(primes.size() < 10001) {
+		primes.add(2);
+		int i = 3;
+		while(primes.get(primes.size()-1) < 2000000) {
 			if(isPrime(i)) primes.add(i);
 			i++;
 		}
-		System.out.println(primes.get(primes.size()-1));
+		long sum = 0;
+		for(int j = 0; j < primes.size()-1; j++) {
+			sum += primes.get(j);
+		}
+		System.out.println(sum);
 	}
 	
 	public static boolean isPrime(int n) {

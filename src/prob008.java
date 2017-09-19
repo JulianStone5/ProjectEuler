@@ -1,4 +1,4 @@
-public class prob8 {
+public class prob008 {
 	
 	public static void main(String[] args) {
 		String num = "73167176531330624919225119674426574742355349194934" + 

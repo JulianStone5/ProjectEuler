@@ -1,4 +1,4 @@
-public class prob23 {
+public class prob023 {
 	
 	public static void main(String[] args) {
 		boolean[] isAb = new boolean[28124];

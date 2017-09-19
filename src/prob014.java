@@ -1,4 +1,4 @@
-public class prob14 {
+public class prob014 {
 	
 	public static void main(String[] args) {
 		int maxSteps = 0;

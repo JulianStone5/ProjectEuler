@@ -1,4 +1,4 @@
-public class prob3 {	
+public class prob003 {	
 	public static void main(String[] args) {
 		long num = new Long("600851475143");
 		for(long i = (long) Math.sqrt(num); i >= 2; i--) {

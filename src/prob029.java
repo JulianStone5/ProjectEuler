@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 import java.util.ArrayList;
 
-public class prob29 {
+public class prob029 {
 	
 	public static ArrayList<BigInteger> powers = new ArrayList<BigInteger>();
 	

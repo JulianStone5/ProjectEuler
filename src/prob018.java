@@ -1,4 +1,4 @@
-public class prob18 {
+public class prob018 {
 	
 	public static int[][] pyr = {{75}, 
 	             {95, 64},

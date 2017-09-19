@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class prob22 {
+public class prob022 {
 	
 	public static ArrayList<String> names = new ArrayList<String>();
 	
 	public static void main(String[] args) {
 		try {
 			
-			Scanner reader = new Scanner(new File("prob22_file.txt"));
+			Scanner reader = new Scanner(new File("prob022_file.txt"));
 			String line = "";
 			while(reader.hasNextLine()) {
 				line = reader.nextLine();

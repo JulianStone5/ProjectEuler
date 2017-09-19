@@ -1,4 +1,4 @@
-public class prob1 {
+public class prob001 {
 	
 	public static void main(String[] args) {
 		int sum = 0;

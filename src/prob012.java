@@ -1,4 +1,4 @@
-public class prob12 {	
+public class prob012 {	
 	
 	public static void main(String[] args) {
 		int numDiv = 0;

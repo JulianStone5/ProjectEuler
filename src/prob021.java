@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class prob21 {
+public class prob021 {
 	
 	public static ArrayList<Integer> amicable = new ArrayList<Integer>();
 	

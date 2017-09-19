@@ -1,4 +1,4 @@
-public class prob17 {
+public class prob017 {
 	
 	public static void main(String[] args) {
 		String numbers = "";

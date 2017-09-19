@@ -1,6 +1,6 @@
 import java.math.BigInteger;
 
-public class prob16 {
+public class prob016 {
 	
 	public static void main(String[] args) {
 		BigInteger num = new BigInteger("2");
