@@ -18,11 +18,16 @@ public class prob22 {
 					names.add(s);
 				}
 			}
-			
+			for(int i = 0; i < names.size(); i++) {
+				alphabetize(i);
+			}
 			reader.close();
 		} catch (FileNotFoundException e) {
 			
 		}
 	}
 	
+	public static void alphabetize(int index) {
+		
+	}
 }
