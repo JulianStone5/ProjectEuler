@@ -5,9 +5,11 @@ import java.util.Scanner;
 
 public class prob22 {
 	
+	public static ArrayList<String> names = new ArrayList<String>();
+	
 	public static void main(String[] args) {
 		try {
-			ArrayList<String> names = new ArrayList<String>();
+			
 			Scanner reader = new Scanner(new File("prob22_file.txt"));
 			String line = "";
 			while((line = reader.nextLine()) != null) {
