@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class prob22 {
@@ -12,22 +13,31 @@ public class prob22 {
 			
 			Scanner reader = new Scanner(new File("prob22_file.txt"));
 			String line = "";
-			while((line = reader.nextLine()) != null) {
+			while(reader.hasNextLine()) {
+				line = reader.nextLine();
 				String[] lineNames = line.split(",");
 				for(String s : lineNames) {
 					names.add(s);
 				}
 			}
+			Collections.sort(names);
+			long nameScoreTotal = 0;
 			for(int i = 0; i < names.size(); i++) {
-				alphabetize(i);
+				nameScoreTotal += (i+1) * worth(names.get(i));
+				if(names.get(i).equals("COLIN")) System.out.println(i);
 			}
+			System.out.println(nameScoreTotal);
 			reader.close();
 		} catch (FileNotFoundException e) {
 			
 		}
 	}
 	
-	public static void alphabetize(int index) {
-		
+	public static long worth(String name) {
+		long sum = 0;
+		for(int i = 1; i < name.length()-1; i++) {
+			sum += (int) (name.charAt(i) - 'A' + 1);
+		}
+		return sum;
 	}
 }
