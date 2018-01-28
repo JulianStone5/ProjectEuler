@@ -12,11 +12,9 @@ public class prob045 {
 		}
 	}
 	
-	public static boolean isPentagonal(long n) {
-		long discriminant = 1 + 24 * n;
-		long temp = (long) Math.sqrt(discriminant);
-		if(temp * temp != discriminant) return false;
-		return true;
+	public static boolean isPentagonal(long p) {
+		double n = (1 + Math.sqrt(1 + 24 * p)) / 6;
+		return n == (int) n;
 	}
 	
 }
