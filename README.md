@@ -1,3 +1,3 @@
 # ProjectEuler
 
-He is be my solutions, bro.
+Here are my solutions to various problems on Project Euler.
