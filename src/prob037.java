@@ -1,33 +1,26 @@
-import java.util.ArrayList;
-
 public class prob037 {
 	
 	public static void main(String[] args) {
-		ArrayList<Integer> truncPrimes = new ArrayList<Integer>();
-		int i = 10;
+		int count = 0;
 		int sum = 0;
-		while(truncPrimes.size() < 11) {
-			if(isPrime(i)) {
-				boolean isTruncPrime = true;
-				int digits = i;
-				int j = 1;
-				while(isTruncPrime && digits % Math.pow(10, j) != digits) {
-					isTruncPrime = isPrime((int) (digits % Math.pow(10, j)));
-					j++;
-				}
-				digits /= 10;
-				while(isTruncPrime && digits > 0) {
-					isTruncPrime = isPrime(digits);
-					digits /= 10;
-				}
-				if(isTruncPrime) {
-					truncPrimes.add(i);
-					sum += i;
+		int i = 23;
+		while(count < 11) {
+			String num = i +"";
+			boolean trunc = true;
+			for(int chop = 0; chop < num.length(); chop++) {
+				boolean forward = isSectionPrime(num,chop,num.length());
+				boolean backward = isSectionPrime(num,0,num.length()-chop);
+				if(!(forward&&backward)) {
+					trunc = false;
+					break;
 				}
 			}
-			i++;
+			if(trunc) {
+				sum += i;
+				count++;
+			}
+			i += 2;
 		}
-		System.out.println(truncPrimes);
 		System.out.println(sum);
 	}
 	
@@ -39,4 +32,8 @@ public class prob037 {
 		return true;
 	}
 	
+	public static boolean isSectionPrime(String num, int start, int end) {
+		String frag = num.substring(start, end);
+		return isPrime(Integer.parseInt(frag));
+	}
 }
